@@ -32,18 +32,14 @@ namespace RiskGameLogic
         {
             _riskGame.Woned += OnWinned;
             _riskGame.Losted += OnLosted;
-        }
-
-        private void Start()
-        {
             Opened?.Invoke();
         }
 
         private void OnDisable()
         {
-            Closed?.Invoke();
             _riskGame.Woned -= OnWinned;
             _riskGame.Losted -= OnLosted;
+            Closed?.Invoke();
         }
 
         public void Init(int betAmount)
