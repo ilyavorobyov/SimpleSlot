@@ -17,8 +17,8 @@ MonoBehaviour:
   autoGameReadyAPI: 1
   playerInfoSimulation:
     authorized: 1
-    isMobile: 0
-    language: ru
+    isMobile: 1
+    language: en
     name: Player this
     uniqueID: 000
     photo: https://justplaygames.ru/public/icon_player.png
@@ -200,7 +200,7 @@ MonoBehaviour:
     ka: 0
     et: 0
     fr: 0
-    kk: 0
+    kk: 1
     ky: 0
     lt: 0
     lv: 0
@@ -208,14 +208,14 @@ MonoBehaviour:
     tg: 0
     tk: 0
     uk: 0
-    uz: 0
-    es: 0
+    uz: 1
+    es: 1
     pt: 0
     ar: 0
     id: 0
     ja: 0
     it: 0
-    de: 0
+    de: 1
     hi: 0
   fonts:
     defaultFont: []

@@ -1864,7 +1864,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1051016457}
-  - {fileID: 2001363604}
   m_Father: {fileID: 1518250756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -2852,6 +2851,7 @@ GameObject:
   - component: {fileID: 747971400}
   - component: {fileID: 747971401}
   - component: {fileID: 747971399}
+  - component: {fileID: 747971402}
   m_Layer: 0
   m_Name: WinRiskPanelText
   m_TagString: Untagged
@@ -2875,7 +2875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -268, y: 381.32}
+  m_AnchoredPosition: {x: -268, y: 360.22}
   m_SizeDelta: {x: 498.7275, y: 349.7778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747971399
@@ -2989,6 +2989,58 @@ MonoBehaviour:
   m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &747971402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747971397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 747971401}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u043E\u0431\u0435\u0434\u0430:"
+  en: 'Victory:'
+  tr: 'Zafer:'
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0416\u0435\u04A3\u0456\u0441:"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 'G''alaba:'
+  es: 'Victoria:'
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 'Sieg:'
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &808014054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,6 +3632,7 @@ GameObject:
   - component: {fileID: 957424504}
   - component: {fileID: 957424506}
   - component: {fileID: 957424505}
+  - component: {fileID: 957424507}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3603,8 +3656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.1403046, y: 1.1401978}
+  m_SizeDelta: {x: -52.4519, y: -57.0129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957424505
 MonoBehaviour:
@@ -3626,10 +3679,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041E\u041A"
+  m_text: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b14464c452f4cf41912d4e683638000, type: 2}
-  m_sharedMaterial: {fileID: 8069426647818088, guid: 7fe88be813188cc4aaa9ecddc6ca7d9d, type: 2}
+  m_sharedMaterial: {fileID: 6515904246672565365, guid: 1b14464c452f4cf41912d4e683638000, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3653,7 +3706,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
+  m_fontSize: 98.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3692,7 +3745,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &957424506
@@ -3703,6 +3756,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957424503}
   m_CullTransparentMesh: 1
+--- !u!114 &957424507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957424503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 957424505}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
+  en: Close
+  tr: "Kapal\u0131"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0416\u0430\u0431\u0443"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Yopish
+  es: Cerca
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "Schlie\xDFen"
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &962682759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,6 +3819,7 @@ GameObject:
   - component: {fileID: 962682760}
   - component: {fileID: 962682762}
   - component: {fileID: 962682761}
+  - component: {fileID: 962682763}
   m_Layer: 0
   m_Name: "Desktop\u0421ontrolText"
   m_TagString: Untagged
@@ -3844,6 +3950,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962682759}
   m_CullTransparentMesh: 1
+--- !u!114 &962682763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962682759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 962682761}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0427\u0442\u043E\u0431\u044B \u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C
+    \u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435 \u0441\u043B\u043E\u0442\u043E\u0432
+    \u0432\u044B\u0431\u0435\u0440\u0438 \u0441\u0442\u0430\u0432\u043A\u0443 \u0438
+    \u043D\u0430\u0436\u0438\u043C\u0430\u0439 \u043A\u043D\u043E\u043F\u043A\u0443
+    \"\u041A\u0420\u0423\u0422\u0418\u0422\u042C\" \u0432 \u043D\u0438\u0436\u043D\u0435\u0439
+    \u0447\u0430\u0441\u0442\u0438 \u044D\u043A\u0440\u0430\u043D\u0430, \u0438\u043B\u0438
+    \u043D\u0430\u0436\u0438\u043C\u0430\u0439 \u043A\u043B\u0430\u0432\u0438\u0448\u0438
+    \"\u042D\u043D\u0442\u0435\u0440\" \u0438\u043B\u0438 \"\u041F\u0440\u043E\u0431\u0435\u043B\""
+  en: To start spinning slots, select a bet and press the "SPIN" button at the bottom
+    of the screen, or press the "Enter" or "Space" keys
+  tr: "Slotlar\u0131 d\xF6nd\xFCrmeye ba\u015Flamak i\xE7in bir bahis se\xE7in ve
+    ekran\u0131n alt\u0131ndaki \"D\xD6ND\xDCR\" d\xFC\u011Fmesine bas\u0131n veya
+    \"Enter\" veya \"Bo\u015Fluk\" tu\u015Flar\u0131na bas\u0131n"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0421\u043B\u043E\u0442\u0442\u0430\u0440\u0434\u044B \u0430\u0439\u043D\u0430\u043B\u0434\u044B\u0440\u0443\u0434\u044B
+    \u0431\u0430\u0441\u0442\u0430\u0443 \u04AF\u0448\u0456\u043D \u0441\u0442\u0430\u0432\u043A\u0430\u043D\u044B
+    \u0442\u0430\u04A3\u0434\u0430\u043F, \u044D\u043A\u0440\u0430\u043D\u043D\u044B\u04A3
+    \u0442\u04E9\u043C\u0435\u043D\u0433\u0456 \u0436\u0430\u0493\u044B\u043D\u0434\u0430\u0493\u044B
+    \xAB\u0410\u0439\u043D\u0430\u043B\u0434\u044B\u0440\u0443\xBB \u0442\u04AF\u0439\u043C\u0435\u0441\u0456\u043D
+    \u0431\u0430\u0441\u044B\u04A3\u044B\u0437 \u043D\u0435\u043C\u0435\u0441\u0435
+    \xABEnter\xBB \u043D\u0435\u043C\u0435\u0441\u0435 \xAB\u0411\u043E\u0441 \u043E\u0440\u044B\u043D\xBB
+    \u043F\u0435\u0440\u043D\u0435\u043B\u0435\u0440\u0456\u043D \u0431\u0430\u0441\u044B\u04A3\u044B\u0437."
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Slotlarni aylantirishni boshlash uchun garov tanlang va ekranning pastki qismidagi
+    "SPIN" tugmasini bosing yoki "Enter" yoki "Space" tugmalarini bosing.
+  es: "Para comenzar a girar tragamonedas, seleccione una apuesta y presione el bot\xF3n
+    \"GIRAR\" en la parte inferior de la pantalla, o presione las teclas \"Entrar\"
+    o \"Espacio\"."
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "Um mit dem Drehen der Spielautomaten zu beginnen, w\xE4hlen Sie einen Einsatz
+    aus und dr\xFCcken Sie die Schaltfl\xE4che \u201ESPIN\u201C unten auf dem Bildschirm
+    oder dr\xFCcken Sie die Tasten \u201EEnter\u201C oder \u201ELeertaste\u201C."
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &965221893
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,6 +4378,7 @@ GameObject:
   - component: {fileID: 1051016457}
   - component: {fileID: 1051016459}
   - component: {fileID: 1051016458}
+  - component: {fileID: 1051016460}
   m_Layer: 0
   m_Name: RiskGameText
   m_TagString: Untagged
@@ -4321,6 +4502,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051016456}
   m_CullTransparentMesh: 1
+--- !u!114 &1051016460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051016456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1051016458}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0420\u0438\u0441\u043A\u043D\u0443\u0442\u044C \u0432\u044B\u0438\u0433\u0440\u044B\u0448\u0435\u043C"
+  en: Risk winning
+  tr: Risk kazanma
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0422\u04D9\u0443\u0435\u043A\u0435\u043B \u0436\u0435\u04A3\u0443"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: G'alaba qozonish xavfi
+  es: Arriesgarse a ganar
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: Risiko gewinnen
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1001 &1054705958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4390,6 +4623,7 @@ GameObject:
   - component: {fileID: 1056962641}
   - component: {fileID: 1056962642}
   - component: {fileID: 1056962640}
+  - component: {fileID: 1056962643}
   m_Layer: 0
   m_Name: LoseRiskPanelText
   m_TagString: Untagged
@@ -4413,7 +4647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -290.2219, y: 388.19}
+  m_AnchoredPosition: {x: -290.23, y: 360.22}
   m_SizeDelta: {x: 454.2762, y: 336.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056962640
@@ -4527,6 +4761,58 @@ MonoBehaviour:
   m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1056962643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056962638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1056962642}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u0440\u043E\u0438\u0433\u0440\u044B\u0448:"
+  en: 'Loss:'
+  tr: "Kay\u0131p:"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0416\u043E\u0493\u0430\u043B\u0442\u0443:"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 'Yo''qotish:'
+  es: "P\xE9rdida:"
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 'Verlust:'
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1061834608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4538,6 +4824,7 @@ GameObject:
   - component: {fileID: 1061834609}
   - component: {fileID: 1061834611}
   - component: {fileID: 1061834610}
+  - component: {fileID: 1061834612}
   m_Layer: 0
   m_Name: BetInfoText
   m_TagString: Untagged
@@ -4561,8 +4848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -178, y: 625}
-  m_SizeDelta: {x: 600, y: 100}
+  m_AnchoredPosition: {x: -221.42, y: 614}
+  m_SizeDelta: {x: 672.49, y: 111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061834610
 MonoBehaviour:
@@ -4612,7 +4899,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 48.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4648,7 +4935,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -74.408966, y: 0, z: 0, w: -26.91389}
+  m_margin: {x: -0.9598388, y: 0, z: 0, w: -2.430912}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4662,6 +4949,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061834608}
   m_CullTransparentMesh: 1
+--- !u!114 &1061834612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061834608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1061834610}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412\u044B\u0431\u0435\u0440\u0438 \u0441\u0442\u0430\u0432\u043A\u0443,
+    \u0441\u0442\u0430\u0432\u043A\u0430 \u0441\u0435\u0439\u0447\u0430\u0441:"
+  en: 'Select bet, bet now:'
+  tr: "Bahis se\xE7in, hemen bahis yap\u0131n:"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0411\u04D9\u0441 \u0442\u0456\u0433\u0443\u0434\u0456 \u0442\u0430\u04A3\u0434\u0430\u04A3\u044B\u0437,
+    \u049B\u0430\u0437\u0456\u0440 \u0441\u0442\u0430\u0432\u043A\u0430 \u0436\u0430\u0441\u0430\u04A3\u044B\u0437:"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 'Tikishni tanlang, hozir tiking:'
+  es: 'Seleccione apuesta, apueste ahora:'
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "Wette ausw\xE4hlen, jetzt wetten:"
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1078908842
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,6 +6114,7 @@ GameObject:
   - component: {fileID: 1350770825}
   - component: {fileID: 1350770824}
   - component: {fileID: 1350770823}
+  - component: {fileID: 1350770826}
   m_Layer: 0
   m_Name: JackpotText
   m_TagString: Untagged
@@ -5910,6 +6252,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350770821}
   m_CullTransparentMesh: 1
+--- !u!114 &1350770826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350770821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1350770824}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0434\u0436\u0435\u043A\u043F\u043E\u0442!"
+  en: jackpot!
+  tr: ikramiye!
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0434\u0436\u0435\u043A\u043F\u043E\u0442!"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: jackpot!
+  es: "\xA1bote!"
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: Jackpot!
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1362136831
 GameObject:
   m_ObjectHideFlags: 0
@@ -5921,6 +6315,7 @@ GameObject:
   - component: {fileID: 1362136832}
   - component: {fileID: 1362136834}
   - component: {fileID: 1362136833}
+  - component: {fileID: 1362136835}
   m_Layer: 0
   m_Name: SpinText
   m_TagString: Untagged
@@ -6044,6 +6439,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362136831}
   m_CullTransparentMesh: 1
+--- !u!114 &1362136835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362136831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1362136833}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041A\u0440\u0443\u0442\u0438\u0442\u044C"
+  en: Twist
+  tr: "B\xFCk\xFCm"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0422\u0432\u0438\u0441\u0442"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Twist
+  es: Girar
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: Twist
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1370365227
 GameObject:
   m_ObjectHideFlags: 0
@@ -6583,6 +7030,7 @@ GameObject:
   - component: {fileID: 1454486325}
   - component: {fileID: 1454486327}
   - component: {fileID: 1454486326}
+  - component: {fileID: 1454486328}
   m_Layer: 0
   m_Name: "Mobile\u0421ontrolText"
   m_TagString: Untagged
@@ -6711,6 +7159,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454486324}
   m_CullTransparentMesh: 1
+--- !u!114 &1454486328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454486324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1454486326}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0427\u0442\u043E\u0431\u044B \u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C
+    \u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435 \u0441\u043B\u043E\u0442\u043E\u0432
+    \u0432\u044B\u0431\u0435\u0440\u0438 \u0441\u0442\u0430\u0432\u043A\u0443 \u0438
+    \u043D\u0430\u0436\u0438\u043C\u0430\u0439 \u043A\u043D\u043E\u043F\u043A\u0443
+    \"\u041A\u0420\u0423\u0422\u0418\u0422\u042C\" \u0432 \u043D\u0438\u0436\u043D\u0435\u0439
+    \u0447\u0430\u0441\u0442\u0438 \u044D\u043A\u0440\u0430\u043D\u0430"
+  en: To start spinning slots, select a bet and click the "SPIN" button at the bottom
+    of the screen
+  tr: "Slotlar\u0131 d\xF6nd\xFCrmeye ba\u015Flamak i\xE7in bir bahis se\xE7in ve
+    ekran\u0131n alt\u0131ndaki \"D\xD6ND\xDCR\" d\xFC\u011Fmesine t\u0131klay\u0131n"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0421\u043B\u043E\u0442\u0442\u0430\u0440\u0434\u044B \u0430\u0439\u043D\u0430\u043B\u0434\u044B\u0440\u0443\u0434\u044B
+    \u0431\u0430\u0441\u0442\u0430\u0443 \u04AF\u0448\u0456\u043D \u0441\u0442\u0430\u0432\u043A\u0430\u043D\u044B
+    \u0442\u0430\u04A3\u0434\u0430\u043F, \u044D\u043A\u0440\u0430\u043D\u043D\u044B\u04A3
+    \u0442\u04E9\u043C\u0435\u043D\u0433\u0456 \u0436\u0430\u0493\u044B\u043D\u0434\u0430\u0493\u044B
+    \xAB\u0410\u0439\u043D\u0430\u043B\u0434\u044B\u0440\u0443\xBB \u0442\u04AF\u0439\u043C\u0435\u0441\u0456\u043D
+    \u0431\u0430\u0441\u044B\u04A3\u044B\u0437"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Slotlarni aylantirishni boshlash uchun garovni tanlang va ekranning pastki
+    qismidagi "SPIN" tugmasini bosing
+  es: "Para comenzar a girar tragamonedas, seleccione una apuesta y haga clic en
+    el bot\xF3n \"GIRAR\" en la parte inferior de la pantalla."
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "Um mit dem Drehen der Spielautomaten zu beginnen, w\xE4hlen Sie einen Einsatz
+    aus und klicken Sie unten auf dem Bildschirm auf die Schaltfl\xE4che \u201EDREHEN\u201C."
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1454826087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +7237,7 @@ GameObject:
   - component: {fileID: 1454826088}
   - component: {fileID: 1454826090}
   - component: {fileID: 1454826089}
+  - component: {fileID: 1454826091}
   m_Layer: 0
   m_Name: RiskGamePanelInfoText
   m_TagString: Untagged
@@ -6849,6 +7365,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454826087}
   m_CullTransparentMesh: 1
+--- !u!114 &1454826091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454826087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1454826089}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412\u044B\u0431\u0435\u0440\u0438 \u043E\u0434\u043D\u0443 \u043A\u0430\u0440\u0442\u0443,
+    \u0435\u0441\u043B\u0438 \u043E\u043D\u0430 \u0431\u0443\u0434\u0435\u0442 \u0431\u043E\u043B\u044C\u0448\u0435
+    \u0434\u0440\u0443\u0433\u043E\u0439, \u0432\u044B\u0438\u0433\u0440\u044B\u0448
+    \u0443\u0434\u0432\u043E\u0438\u0442\u0441\u044F, \u0435\u0441\u043B\u0438 \u043C\u0435\u043D\u044C\u0448\u0435
+    - \u0432\u044B\u0438\u0433\u0440\u044B\u0448 \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043D"
+  en: Choose one card, if it is larger than the other, the winnings will be doubled,
+    if less, the winnings will be lost
+  tr: "Bir kart se\xE7in, di\u011Ferinden b\xFCy\xFCkse kazan\xE7 ikiye katlan\u0131r,
+    daha azsa kazan\xE7 kaybedilir"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0411\u0456\u0440 \u043A\u0430\u0440\u0442\u0430\u043D\u044B \u0442\u0430\u04A3\u0434\u0430\u04A3\u044B\u0437,
+    \u0435\u0433\u0435\u0440 \u043E\u043B \u0435\u043A\u0456\u043D\u0448\u0456\u0441\u0456\u043D\u0435\u043D
+    \u04AF\u043B\u043A\u0435\u043D \u0431\u043E\u043B\u0441\u0430, \u04B1\u0442\u044B\u0441
+    \u0435\u043A\u0456 \u0435\u0441\u0435\u043B\u0435\u043D\u0435\u0434\u0456, \u0430\u0437
+    \u0431\u043E\u043B\u0441\u0430, \u04B1\u0442\u044B\u0441 \u0436\u043E\u0493\u0430\u043B\u0430\u0434\u044B."
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Bitta kartani tanlang, agar u ikkinchisidan katta bo'lsa, yutuq ikki baravar
+    ko'payadi, agar kamroq bo'lsa, yutuq yo'qoladi.
+  es: "Elija una tarjeta, si es m\xE1s grande que la otra, las ganancias se duplicar\xE1n,
+    si es menor, las ganancias se perder\xE1n."
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "W\xE4hlen Sie eine Karte, ist sie gr\xF6\xDFer als die andere, wird der Gewinn
+    verdoppelt, ist sie kleiner, geht der Gewinn verloren"
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1476009293
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,7 +8469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 100000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b14464c452f4cf41912d4e683638000, type: 2}
   m_sharedMaterial: {fileID: 6515904246672565365, guid: 1b14464c452f4cf41912d4e683638000, type: 2}
@@ -7915,7 +8496,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 130
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7995,8 +8576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 250, y: 360.22}
-  m_SizeDelta: {x: 387.6547, y: 307.5693}
+  m_AnchoredPosition: {x: 256.29, y: 360.22}
+  m_SizeDelta: {x: 512.582, y: 193.7115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1701942952
 GameObject:
@@ -9034,6 +9615,7 @@ GameObject:
   - component: {fileID: 1874399594}
   - component: {fileID: 1874399596}
   - component: {fileID: 1874399595}
+  - component: {fileID: 1874399597}
   m_Layer: 0
   m_Name: NoMoneyText
   m_TagString: Untagged
@@ -9159,6 +9741,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874399593}
   m_CullTransparentMesh: 1
+--- !u!114 &1874399597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874399593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1874399595}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 \u0434\u0435\u043D\u0435\u0433,
+    \u0443\u043C\u0435\u043D\u044C\u0448\u0438 \u0441\u0442\u0430\u0432\u043A\u0443
+    \u0438\u043B\u0438 \u0443\u0432\u0435\u043B\u0438\u0447\u044C \u0431\u0430\u043B\u0430\u043D\u0441"
+  en: Not enough money, reduce the bet or increase the balance
+  tr: "Yeterli para yok, bahsi azalt\u0131n veya bakiyeyi art\u0131r\u0131n"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0410\u049B\u0448\u0430 \u0436\u0435\u0442\u043A\u0456\u043B\u0456\u043A\u0441\u0456\u0437,
+    \u0441\u0442\u0430\u0432\u043A\u0430\u043D\u044B \u0430\u0437\u0430\u0439\u0442\u044B\u04A3\u044B\u0437
+    \u043D\u0435\u043C\u0435\u0441\u0435 \u0442\u0435\u04A3\u0433\u0435\u0440\u0456\u043C\u0434\u0456
+    \u043A\u04E9\u0431\u0435\u0439\u0442\u0456\u04A3\u0456\u0437"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Pul yetarli emas, tikishni kamaytiring yoki balansni oshiring
+  es: No hay suficiente dinero, reduce la apuesta o aumenta el saldo.
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "Nicht genug Geld, reduzieren Sie den Einsatz oder erh\xF6hen Sie das Guthaben"
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1877965564
 GameObject:
   m_ObjectHideFlags: 0
@@ -9406,6 +10045,7 @@ GameObject:
   - component: {fileID: 1960447247}
   - component: {fileID: 1960447246}
   - component: {fileID: 1960447245}
+  - component: {fileID: 1960447248}
   m_Layer: 0
   m_Name: WinText
   m_TagString: Untagged
@@ -9543,6 +10183,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960447243}
   m_CullTransparentMesh: 1
+--- !u!114 &1960447248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960447243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1960447246}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412\u044B\u0438\u0433\u0440\u044B\u0448!"
+  en: Winning!
+  tr: Kazanan!
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0416\u0435\u04A3\u0456\u0441!"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: G'alaba!
+  es: "\xA1Victorioso!"
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: Gewinnen!
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &1984348783
 GameObject:
   m_ObjectHideFlags: 0
@@ -9638,81 +10330,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984348783}
   m_CullTransparentMesh: 1
---- !u!1 &2001363603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2001363604}
-  - component: {fileID: 2001363606}
-  - component: {fileID: 2001363605}
-  m_Layer: 0
-  m_Name: Curtain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2001363604
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001363603}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 466539575}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2001363605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001363603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0.78431374}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2001363606
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001363603}
-  m_CullTransparentMesh: 1
 --- !u!1 &2026500634
 GameObject:
   m_ObjectHideFlags: 0
@@ -9724,6 +10341,7 @@ GameObject:
   - component: {fileID: 2026500635}
   - component: {fileID: 2026500637}
   - component: {fileID: 2026500636}
+  - component: {fileID: 2026500638}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9847,6 +10465,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026500634}
   m_CullTransparentMesh: 1
+--- !u!114 &2026500638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026500634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 2026500636}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
+  en: Close
+  tr: "Kapal\u0131"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0416\u0430\u0431\u0443"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Yopish
+  es: Cerca
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: "Schlie\xDFen"
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1 &2027932584
 GameObject:
   m_ObjectHideFlags: 0
@@ -10313,6 +10983,7 @@ GameObject:
   - component: {fileID: 2069999518}
   - component: {fileID: 2069999517}
   - component: {fileID: 2069999519}
+  - component: {fileID: 2069999520}
   m_Layer: 0
   m_Name: BigWinText
   m_TagString: Untagged
@@ -10450,6 +11121,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uIElementsAnimation: {fileID: 1516165275}
   _duration: 2
+--- !u!114 &2069999520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069999515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 2069999517}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0421\u0443\u043F\u0435\u0440 \u0432\u044B\u0438\u0433\u0440\u044B\u0448!"
+  en: Super win!
+  tr: "S\xFCper galibiyet!"
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: "\u0421\u0443\u043F\u0435\u0440 \u0436\u0435\u04A3\u0456\u0441!"
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: Super g'alaba!
+  es: "\xA1S\xFAper victoria!"
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: Super Sieg!
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 7/7 completed
+  componentTextField: 1
+  countLang: 7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
