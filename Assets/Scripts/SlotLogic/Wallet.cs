@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Advertising;
 using RiskGameLogic;
 using SaveLogic;
@@ -11,6 +12,7 @@ namespace SlotLogic
     public class Wallet : MonoBehaviour
     {
         [SerializeField] private UIElementsAnimation _uiElementsAnimation;
+        [SerializeField] private AudioSource _addMoneySound;
         [SerializeField] private TMP_Text _winningAmountText;
         [SerializeField] private TMP_Text _walletText;
         [SerializeField] private Saver _saver;
@@ -22,6 +24,14 @@ namespace SlotLogic
         private const string PlusText = "+";
 
         private int _currentBalance;
+        private Coroutine _addWinnings;
+        private bool _isAdding = false;
+        private int _winningAmount = 0;
+        private int _tempCurrentBalance;
+        private int _tempAddedWinningsBalance;
+        private float _balanceChangeTime = 0.04f;
+        private int _addingValue;
+        private int _addingValueDivisor = 10;
 
         public int CurrentBalance => _currentBalance;
 
@@ -58,12 +68,51 @@ namespace SlotLogic
             BalanceChanged?.Invoke();
         }
 
-        private void OnWoned(int amount)
+        private void StartAddWinnings()
         {
-            _currentBalance += amount;
-            ShowCurrentBalance();
+            _isAdding = true;
+            _addWinnings = StartCoroutine(AddWinnings());
+        }
+
+        private void StopAddWinnings()
+        {
+            if (_addWinnings != null)
+            {
+                StopCoroutine(_addWinnings);
+            }
+        }
+
+        private IEnumerator AddWinnings()
+        {
+            var waitForSeconds = new WaitForSeconds(_balanceChangeTime);
+            _tempCurrentBalance = _currentBalance;
+            _tempAddedWinningsBalance = _tempCurrentBalance + _winningAmount;
+            _addingValue = (int)Mathf.Round(_winningAmount / _addingValueDivisor);
+            _addMoneySound.PlayDelayed(0);
+
+            while (_isAdding)
+            {
+                yield return waitForSeconds;
+                _tempCurrentBalance += _addingValue;
+                _walletText.text = _tempCurrentBalance.ToString();
+
+                if(_tempCurrentBalance >= _tempAddedWinningsBalance)
+                {
+                    _currentBalance += _winningAmount;
+                    ShowCurrentBalance();
+                    StopAddWinnings();
+                    _isAdding = false;
+                    _addMoneySound.Stop();
+                }
+            }
+        }
+
+        private void OnWoned(int winningAmount)
+        {
+            _winningAmount = winningAmount;
             _uiElementsAnimation.Appear(_winningAmountText.gameObject);
-            _winningAmountText.text = PlusText + amount.ToString();
+            _winningAmountText.text = PlusText + _winningAmount.ToString();
+            StartAddWinnings();
         }
 
         private void OnDecreased(int amount)

@@ -22,6 +22,7 @@ namespace RiskGameLogic
 
         private int _betAmount;
         private float _closingDelay = 2f;
+        private float _addingWinningsDelay = 2.2f;
 
         public event Action Opened;
         public event Action Closed;
@@ -53,6 +54,11 @@ namespace RiskGameLogic
             _uiElementsAnimation.Disappear(_riskGameButton.gameObject);
         }
 
+        private void AddWinningAmount()
+        {
+            Woned?.Invoke(_betAmount);
+        }
+
         private void OnLosted()
         {
             _uiElementsAnimation.Appear(_loseText.gameObject);
@@ -67,10 +73,10 @@ namespace RiskGameLogic
         {
             _uiElementsAnimation.Appear(_winText.gameObject);
             _uiElementsAnimation.Appear(_amountText.gameObject);
-            Woned?.Invoke(_betAmount);
             _amountText.text = AdditionText + _betAmount;
             _winSound.PlayDelayed(0);
             Invoke(nameof(Hide), _closingDelay);
+            Invoke(nameof(AddWinningAmount), _addingWinningsDelay);
         }
     }
 }
