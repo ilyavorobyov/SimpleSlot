@@ -1,9 +1,9 @@
 {
-  "idSave": 31,
+  "idSave": 122,
   "isFirstSession": false,
-  "language": "ru",
+  "language": "en",
   "promptDone": false,
-  "Balance": 6870,
-  "BetValue": 10,
-  "IsFirstStart": true
+  "Balance": 8800,
+  "BetValue": 50,
+  "IsFirstStart": false
 }
