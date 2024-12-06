@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UI;
+using YG;
 
 namespace SlotLogic
 {
@@ -26,6 +27,7 @@ namespace SlotLogic
         [SerializeField] private Wallet _wallet;
         [SerializeField] private RiskGamePanel _riskGamePanel;
         [SerializeField] private TrainingPanel _trainingPanel;
+        [SerializeField] private InfoPanel _infoPanel;
 
         private Coroutine _spinSlots;
         private float _slotDelay = 0.3f;
@@ -49,6 +51,8 @@ namespace SlotLogic
             _riskGamePanel.Closed += OnPanelClosed;
             _trainingPanel.Opened += OnPanelOpened;
             _trainingPanel.Closed += OnPanelClosed;
+            _infoPanel.Opened += OnPanelOpened;
+            _infoPanel.Closed += OnPanelClosed;
         }
 
         private void OnDisable()
@@ -60,6 +64,8 @@ namespace SlotLogic
             _riskGamePanel.Closed -= OnPanelClosed;
             _trainingPanel.Opened -= OnPanelOpened;
             _trainingPanel.Closed -= OnPanelClosed;
+            _infoPanel.Opened -= OnPanelOpened;
+            _infoPanel.Closed -= OnPanelClosed;
 
             if (_playerInput != null)
             {
@@ -74,7 +80,7 @@ namespace SlotLogic
                 slot.Init(_slotSymbols);
             }
 
-            _isMobile = false;
+            _isMobile = YandexGame.EnvironmentData.isMobile;
 
             if (!_isMobile)
             {

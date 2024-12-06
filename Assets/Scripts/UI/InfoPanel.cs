@@ -1,3 +1,4 @@
+using System;
 using SlotLogic;
 using TMPro;
 using UnityEngine.UI;
@@ -10,6 +11,19 @@ namespace UI
         [SerializeField] private SlotSymbol[] _slotSymbols;
         [SerializeField] private Image[] _symbolsImages;
         [SerializeField] private TMP_Text[] _symbolWinMultiplierTexts;
+
+        public event Action Opened;
+        public event Action Closed;
+
+        private void OnEnable()
+        {
+            Opened?.Invoke();
+        }
+
+        private void OnDisable()
+        {
+            Closed?.Invoke();
+        }
 
         private void Awake()
         {

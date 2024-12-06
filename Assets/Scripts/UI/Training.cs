@@ -13,7 +13,7 @@ namespace UI
 
         private void Awake()
         {
-            if(!_saver.CheckLaunchedEarlier())
+            if(_saver.CheckLaunchedEarlier())
             {
                 _uiElementsAnimation.Appear(_trainingPanel.gameObject);
             }
