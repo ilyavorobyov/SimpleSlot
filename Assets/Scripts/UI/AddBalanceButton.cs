@@ -3,31 +3,33 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Advertising
+namespace UI
 {
     [RequireComponent(typeof(Button))]
-    public class AddBalanceButton : MonoBehaviour
+    public abstract class AddBalanceButton : MonoBehaviour
     {
         [SerializeField] private int _addedAmount;
         [SerializeField] private TMP_Text _addBalanceButtonText;
 
-        private Button _addBalanceButton;
+        protected Button AddButton;
 
         public event Action<int> Added;
 
+        public TMP_Text AddBalanceButtonText => _addBalanceButtonText;
+
         private void Awake()
         {
-            _addBalanceButton = GetComponent<Button>();
-            _addBalanceButton.onClick.AddListener(OnAddBalanceButtonClick);
+            AddButton = GetComponent<Button>();
+            AddButton.onClick.AddListener(OnAddBalanceButtonClick);
             _addBalanceButtonText.text = "+" + _addedAmount.ToString();
         }
 
         private void OnDisable()
         {
-            _addBalanceButton.onClick.RemoveListener(OnAddBalanceButtonClick);
+            AddButton.onClick.RemoveListener(OnAddBalanceButtonClick);
         }
 
-        private void OnAddBalanceButtonClick()
+        public virtual void OnAddBalanceButtonClick()
         {
             Added?.Invoke(_addedAmount);
         }

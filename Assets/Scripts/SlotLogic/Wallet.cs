@@ -18,7 +18,8 @@ namespace SlotLogic
         [SerializeField] private Saver _saver;
         [SerializeField] private ResultChecker _resultChecker;
         [SerializeField] private Spinner _spinner;
-        [SerializeField] private AddBalanceButton _addBalance;
+        [SerializeField] private AddBalanceAdvertisingButton _addBalanceAdvertisingButton;
+        [SerializeField] private AddFreeBalanceButton _addFreeBalanceButton;
         [SerializeField] private RiskGamePanel _riskGamePanel;
 
         private const string PlusText = "+";
@@ -41,7 +42,8 @@ namespace SlotLogic
         {
             _resultChecker.Woned += OnWoned;
             _spinner.BetMade += OnDecreased;
-            _addBalance.Added += OnWoned;
+            _addBalanceAdvertisingButton.Added += OnWoned;
+            _addFreeBalanceButton.Added += OnWoned;
             _riskGamePanel.Woned += OnWoned;
             _riskGamePanel.Losted += OnDecreased;
         }
@@ -50,7 +52,8 @@ namespace SlotLogic
         {
             _resultChecker.Woned -= OnWoned;
             _spinner.BetMade -= OnDecreased;
-            _addBalance.Added -= OnWoned;
+            _addBalanceAdvertisingButton.Added -= OnWoned;
+            _addFreeBalanceButton.Added -= OnWoned;
             _riskGamePanel.Woned -= OnWoned;
             _riskGamePanel.Losted -= OnDecreased;
         }
