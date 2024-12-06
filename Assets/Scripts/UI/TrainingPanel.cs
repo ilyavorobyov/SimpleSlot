@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 namespace UI
 {
@@ -19,7 +20,7 @@ namespace UI
 
         private void OnEnable()
         {
-            _isMobile = true;
+            _isMobile = YandexGame.EnvironmentData.isMobile;
 
             if (_isMobile)
             {
