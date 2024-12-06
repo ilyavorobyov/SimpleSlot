@@ -4,8 +4,8 @@ using Advertising;
 using RiskGameLogic;
 using SaveLogic;
 using TMPro;
-using UI;
 using UnityEngine;
+using UI;
 
 namespace SlotLogic
 {
