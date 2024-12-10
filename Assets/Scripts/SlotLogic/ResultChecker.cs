@@ -12,6 +12,7 @@ namespace SlotLogic
         [SerializeField] private UIElementsAnimation _uIElementsAnimation;
         [SerializeField] private VictoryLogo _victoryLogo;
         [SerializeField] private AudioSource _winSound;
+        [SerializeField] private AudioSource _winSoundDoubleMatch;
         [SerializeField] private AudioSource _lossSound;
         [SerializeField] private BetAmountSelector _betAmountSelector;
         [SerializeField] private TMP_Text _winText;
@@ -35,8 +36,7 @@ namespace SlotLogic
                 _slots.Add(slot.CurrentSlotSymbol);
             }
 
-            if (_slots[0].SlotTripleHitMultiplier == _slots[1].SlotTripleHitMultiplier &&
-                _slots[1].SlotTripleHitMultiplier == _slots[2].SlotTripleHitMultiplier)
+            if (_slots[0].Id == _slots[1].Id && _slots[1].Id == _slots[2].Id)
             {
                 _victoryLogo.Show();
                 _winSound.PlayDelayed(0);
@@ -44,17 +44,17 @@ namespace SlotLogic
                 _uIElementsAnimation.Appear(_leftYellowStick.gameObject);
                 _uIElementsAnimation.Appear(_righttYellowStick.gameObject);
             }
-            else if(_slots[0].SlotTripleHitMultiplier == _slots[1].SlotTripleHitMultiplier)
+            else if(_slots[0].Id == _slots[1].Id)
             {
                 _victoryLogo.Show();
-                _winSound.PlayDelayed(0);
+                _winSoundDoubleMatch.PlayDelayed(0);
                 CalculateWinningsAmount(_slots[0].SlotDoubleHitMultiplier);
                 _uIElementsAnimation.Appear(_leftYellowStick.gameObject);
             }
-            else if(_slots[1].SlotTripleHitMultiplier == _slots[2].SlotTripleHitMultiplier)
+            else if(_slots[1].Id == _slots[2].Id)
             {
                 _victoryLogo.Show();
-                _winSound.PlayDelayed(0);
+                _winSoundDoubleMatch.PlayDelayed(0);
                 CalculateWinningsAmount(_slots[1].SlotDoubleHitMultiplier);
                 _uIElementsAnimation.Appear(_righttYellowStick.gameObject);
             }
