@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UI;
 using UnityEngine;
@@ -18,6 +17,8 @@ namespace SlotLogic
         [SerializeField] private TMP_Text _winText;
         [SerializeField] private TMP_Text _bigWinText;
         [SerializeField] private TMP_Text _jackpotText;
+        [SerializeField] private YellowStick _leftYellowStick;
+        [SerializeField] private YellowStick _righttYellowStick;
 
         private int _maxSmallWinningsAmount = 500;
         private int _maxBigWinningsAmount = 1999;
@@ -34,11 +35,28 @@ namespace SlotLogic
                 _slots.Add(slot.CurrentSlotSymbol);
             }
 
-            if (!_slots.Distinct().Skip(1).Any())
+            if (_slots[0].SlotTripleHitMultiplier == _slots[1].SlotTripleHitMultiplier &&
+                _slots[1].SlotTripleHitMultiplier == _slots[2].SlotTripleHitMultiplier)
             {
                 _victoryLogo.Show();
                 _winSound.PlayDelayed(0);
-                CalculateWinningsAmount(_slots[0]);
+                CalculateWinningsAmount(_slots[0].SlotTripleHitMultiplier);
+                _uIElementsAnimation.Appear(_leftYellowStick.gameObject);
+                _uIElementsAnimation.Appear(_righttYellowStick.gameObject);
+            }
+            else if(_slots[0].SlotTripleHitMultiplier == _slots[1].SlotTripleHitMultiplier)
+            {
+                _victoryLogo.Show();
+                _winSound.PlayDelayed(0);
+                CalculateWinningsAmount(_slots[0].SlotDoubleHitMultiplier);
+                _uIElementsAnimation.Appear(_leftYellowStick.gameObject);
+            }
+            else if(_slots[1].SlotTripleHitMultiplier == _slots[2].SlotTripleHitMultiplier)
+            {
+                _victoryLogo.Show();
+                _winSound.PlayDelayed(0);
+                CalculateWinningsAmount(_slots[1].SlotDoubleHitMultiplier);
+                _uIElementsAnimation.Appear(_righttYellowStick.gameObject);
             }
             else
             {
@@ -48,9 +66,9 @@ namespace SlotLogic
             _slots.Clear();
         }
 
-        private void CalculateWinningsAmount(SlotSymbol slotSymbol)
+        private void CalculateWinningsAmount(int winMultiplier)
         {
-            _winningAmount = slotSymbol.WinMultiplier * _betAmountSelector.CurrentBetAmount;
+            _winningAmount = winMultiplier * _betAmountSelector.CurrentBetAmount;
             Woned?.Invoke(_winningAmount);
             ShowWinningText();
         }

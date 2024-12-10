@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _symbolImage: {fileID: 21300000, guid: 3dab7d594169dbd479c8a8c2ebf233bc, type: 3}
-  _winMultiplier: 10
+  _slotTripleHitMultiplier: 10
+  _slotDoubleHitMultiplier: 1

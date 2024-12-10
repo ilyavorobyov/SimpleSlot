@@ -10,7 +10,8 @@ namespace UI
     {
         [SerializeField] private SlotSymbol[] _slotSymbols;
         [SerializeField] private Image[] _symbolsImages;
-        [SerializeField] private TMP_Text[] _symbolWinMultiplierTexts;
+        [SerializeField] private TMP_Text[] _symbolWinTripleMultiplierTexts;
+        [SerializeField] private TMP_Text[] _symbolWinDoubleMultiplierTexts;
 
         public event Action Opened;
         public event Action Closed;
@@ -32,8 +33,10 @@ namespace UI
                 for (int i = 0; i < _slotSymbols.Length; i++)
                 {
                     _symbolsImages[i].sprite = _slotSymbols[i].SymbolImage;
-                    _symbolWinMultiplierTexts[i].text = _symbolWinMultiplierTexts[i].text
-                        + _slotSymbols[i].WinMultiplier.ToString();
+                    _symbolWinTripleMultiplierTexts[i].text = _symbolWinTripleMultiplierTexts[i].text
+                        + _slotSymbols[i].SlotTripleHitMultiplier.ToString();
+                    _symbolWinDoubleMultiplierTexts[i].text = _symbolWinDoubleMultiplierTexts[i].text
+                        + _slotSymbols[i].SlotDoubleHitMultiplier.ToString();
                 }
             }
         }
