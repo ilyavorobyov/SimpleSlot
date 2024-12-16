@@ -128,6 +128,7 @@ namespace SlotLogic
                 _curtainStartButton.gameObject.SetActive(false);
                 _notEnoughMoneyStartText.gameObject.SetActive(false);
                 _startButton.interactable = true;
+                _isCanSpin = true;
             }
             else if (!_isSpinned)
             {
@@ -135,6 +136,7 @@ namespace SlotLogic
                 _curtainStartButton.gameObject.SetActive(true);
                 _notEnoughMoneyStartText.gameObject.SetActive(true);
                 _startButton.interactable = false;
+                _isCanSpin = false;
             }
         }
 

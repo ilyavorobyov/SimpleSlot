@@ -10,7 +10,7 @@ namespace VisualDecorations
         [SerializeField] private Sprite _defaultSprite;
 
         private Image _logoImage;
-        private float _winDuration = 2;
+        private float _winDuration = 1.2f;
 
         private void Awake()
         {

@@ -11,7 +11,7 @@ namespace YG
         public bool promptDone;
 
         // Свои данные: 
-        public int Balance = 3000;
+        public int Balance = 2000;
         public int BetValue = 10;
         public bool IsFirstStart = true;
         public SavesYG()
