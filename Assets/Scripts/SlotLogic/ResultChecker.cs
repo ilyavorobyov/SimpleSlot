@@ -19,7 +19,7 @@ namespace SlotLogic
         [SerializeField] private TMP_Text _bigWinText;
         [SerializeField] private TMP_Text _jackpotText;
         [SerializeField] private YellowStick _leftYellowStick;
-        [SerializeField] private YellowStick _righttYellowStick;
+        [SerializeField] private YellowStick _rightYellowStick;
 
         private int _maxSmallWinningsAmount = 500;
         private int _maxBigWinningsAmount = 1999;
@@ -27,6 +27,8 @@ namespace SlotLogic
 
         private List<SlotSymbol> _slots = new List<SlotSymbol>();
 
+        public event Action TripleMatched;
+        public event Action DoubleMatched;
         public event Action<int> Woned;
 
         public void CompareSlotValues(Slot[] slots)
@@ -42,7 +44,8 @@ namespace SlotLogic
                 _winSound.PlayDelayed(0);
                 CalculateWinningsAmount(_slots[0].SlotTripleHitMultiplier);
                 _uIElementsAnimation.Appear(_leftYellowStick.gameObject);
-                _uIElementsAnimation.Appear(_righttYellowStick.gameObject);
+                _uIElementsAnimation.Appear(_rightYellowStick.gameObject);
+                TripleMatched?.Invoke();
             }
             else if(_slots[0].Id == _slots[1].Id)
             {
@@ -50,13 +53,15 @@ namespace SlotLogic
                 _winSoundDoubleMatch.PlayDelayed(0);
                 CalculateWinningsAmount(_slots[0].SlotDoubleHitMultiplier);
                 _uIElementsAnimation.Appear(_leftYellowStick.gameObject);
+                DoubleMatched?.Invoke();
             }
             else if(_slots[1].Id == _slots[2].Id)
             {
                 _victoryLogo.Show();
                 _winSoundDoubleMatch.PlayDelayed(0);
                 CalculateWinningsAmount(_slots[1].SlotDoubleHitMultiplier);
-                _uIElementsAnimation.Appear(_righttYellowStick.gameObject);
+                _uIElementsAnimation.Appear(_rightYellowStick.gameObject);
+                DoubleMatched?.Invoke();
             }
             else
             {

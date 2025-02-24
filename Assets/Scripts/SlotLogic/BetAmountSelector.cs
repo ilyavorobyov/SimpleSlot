@@ -1,7 +1,7 @@
 using System;
+using BetSelectionLogic;
 using SaveLogic;
 using TMPro;
-using UI;
 using UnityEngine;
 
 namespace SlotLogic

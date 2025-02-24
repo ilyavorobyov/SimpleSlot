@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +5,7 @@ using YG;
 
 namespace UI
 {
-    public class TrainingPanel : MonoBehaviour
+    public class TrainingPanel : Panel
     {
         [SerializeField] private UIElementsAnimation _uiElementsAnimation;
         [SerializeField] private TMP_Text _mobileControl;
@@ -14,9 +13,6 @@ namespace UI
         [SerializeField] private Button _closePanelButton;
 
         private bool _isMobile;
-
-        public event Action Opened;
-        public event Action Closed;
 
         private void OnEnable()
         {
@@ -36,7 +32,7 @@ namespace UI
 
         private void Start()
         {
-            Opened?.Invoke();
+            OnShown();
         }
 
         private void Disable()
@@ -47,7 +43,7 @@ namespace UI
         private void OnCloseButtonClick()
         {
             _uiElementsAnimation.Disappear(gameObject);
-            Closed?.Invoke();
+            OnHidden();
         }
     }
 }

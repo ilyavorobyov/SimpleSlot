@@ -10,7 +10,7 @@ namespace VisualDecorations
         [SerializeField] private Sprite _defaultSprite;
 
         private Image _logoImage;
-        private float _winDuration = 1.2f;
+        private float _winDuration = 1.3f;
 
         private void Awake()
         {
@@ -25,7 +25,8 @@ namespace VisualDecorations
 
         private void SetDefaultLogo()
         {
-            _logoImage.sprite = _defaultSprite;
+            if(_logoImage.sprite == _winSprite)
+                _logoImage.sprite = _defaultSprite;
         }
     }
 }

@@ -1,11 +1,10 @@
 using System;
 using System.Collections;
-using RiskGameLogic;
 using TMPro;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using UI;
 using YG;
 
 namespace SlotLogic
@@ -25,9 +24,7 @@ namespace SlotLogic
         [SerializeField] private SlotSymbol[] _slotSymbols;
         [SerializeField] private BetAmountSelector _betAmountSelector;
         [SerializeField] private Wallet _wallet;
-        [SerializeField] private RiskGamePanel _riskGamePanel;
-        [SerializeField] private TrainingPanel _trainingPanel;
-        [SerializeField] private InfoPanel _infoPanel;
+        [SerializeField] private Panel[] _panels;
 
         private Coroutine _spinSlots;
         private float _slotDelay = 0.3f;
@@ -44,33 +41,33 @@ namespace SlotLogic
 
         private void OnEnable()
         {
+            foreach (var panel in _panels)
+            {
+                panel.Opened += OnPanelOpened;
+                panel.Closed += OnPanelClosed;
+            }
+
             _startButton.onClick.AddListener(OnStartButtonClick);
             _wallet.BalanceChanged += CheckSpinPossibility;
             _betAmountSelector.BetChanged += CheckSpinPossibility;
-            _riskGamePanel.Opened += OnPanelOpened;
-            _riskGamePanel.Closed += OnPanelClosed;
-            _trainingPanel.Opened += OnPanelOpened;
-            _trainingPanel.Closed += OnPanelClosed;
-            _infoPanel.Opened += OnPanelOpened;
-            _infoPanel.Closed += OnPanelClosed;
         }
 
         private void OnDisable()
         {
-            _startButton.onClick.RemoveListener(OnStartButtonClick);
-            _wallet.BalanceChanged -= CheckSpinPossibility;
-            _betAmountSelector.BetChanged -= CheckSpinPossibility;
-            _riskGamePanel.Opened -= OnPanelOpened;
-            _riskGamePanel.Closed -= OnPanelClosed;
-            _trainingPanel.Opened -= OnPanelOpened;
-            _trainingPanel.Closed -= OnPanelClosed;
-            _infoPanel.Opened -= OnPanelOpened;
-            _infoPanel.Closed -= OnPanelClosed;
+            foreach (var panel in _panels)
+            {
+                panel.Opened -= OnPanelOpened;
+                panel.Closed -= OnPanelClosed;
+            }
 
             if (_playerInput != null)
             {
                 _playerInput.Disable();
             }
+
+            _startButton.onClick.RemoveListener(OnStartButtonClick);
+            _wallet.BalanceChanged -= CheckSpinPossibility;
+            _betAmountSelector.BetChanged -= CheckSpinPossibility;
         }
 
         private void Awake()

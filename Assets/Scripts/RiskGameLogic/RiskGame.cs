@@ -9,7 +9,7 @@ namespace RiskGameLogic
         [SerializeField] private Card[] _cards;
         [SerializeField] private SelectableCard _leftCard;
         [SerializeField] private SelectableCard _rightCard;
-        [SerializeField] private RiskGamePanel _riskGamePanel;
+        [SerializeField] private RiskGameSeniorCardPanel _riskGamePanel;
         
         private List<SelectableCard> _selectableCards = new List<SelectableCard>();
 

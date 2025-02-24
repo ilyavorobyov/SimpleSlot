@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a152d8d41f96343897e7e4cf76541f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _symbolImage: {fileID: 21300000, guid: 8840d3f1db30e6b41b6fd0892f3ed394, type: 3}
-  _slotTripleHitMultiplier: 20
+  _symbolImage: {fileID: 21300000, guid: 9e7192aff6df95942bf457bf6d2f09ae, type: 3}
+  _slotTripleHitMultiplier: 9
   _slotDoubleHitMultiplier: 2
   _id: 1

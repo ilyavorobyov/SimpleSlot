@@ -1,4 +1,3 @@
-using System;
 using SlotLogic;
 using TMPro;
 using UnityEngine.UI;
@@ -6,24 +5,21 @@ using UnityEngine;
 
 namespace UI
 {
-    public class InfoPanel : MonoBehaviour
+    public class InfoPanel : Panel
     {
         [SerializeField] private SlotSymbol[] _slotSymbols;
         [SerializeField] private Image[] _symbolsImages;
         [SerializeField] private TMP_Text[] _symbolWinTripleMultiplierTexts;
         [SerializeField] private TMP_Text[] _symbolWinDoubleMultiplierTexts;
 
-        public event Action Opened;
-        public event Action Closed;
-
         private void OnEnable()
         {
-            Opened?.Invoke();
+            OnShown();
         }
 
         private void OnDisable()
         {
-            Closed?.Invoke();
+            OnHidden();
         }
 
         private void Awake()

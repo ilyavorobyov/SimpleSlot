@@ -6,6 +6,7 @@ using SaveLogic;
 using TMPro;
 using UnityEngine;
 using UI;
+using BonusGame;
 
 namespace SlotLogic
 {
@@ -20,7 +21,8 @@ namespace SlotLogic
         [SerializeField] private Spinner _spinner;
         [SerializeField] private AddBalanceAdvertisingButton _addBalanceAdvertisingButton;
         [SerializeField] private AddFreeBalanceButton _addFreeBalanceButton;
-        [SerializeField] private RiskGamePanel _riskGamePanel;
+        [SerializeField] private RiskGameSeniorCardPanel _riskGamePanel;
+        [SerializeField] private BonusGameThreeChestsPanel _bonusGameThreeChestsPanel;
 
         private const string PlusText = "+";
 
@@ -46,6 +48,7 @@ namespace SlotLogic
             _addFreeBalanceButton.Added += OnWoned;
             _riskGamePanel.Woned += OnWoned;
             _riskGamePanel.Losted += OnDecreased;
+            _bonusGameThreeChestsPanel.Won += OnWoned;
         }
 
         private void OnDisable()
@@ -56,6 +59,7 @@ namespace SlotLogic
             _addFreeBalanceButton.Added -= OnWoned;
             _riskGamePanel.Woned -= OnWoned;
             _riskGamePanel.Losted -= OnDecreased;
+            _bonusGameThreeChestsPanel.Won -= OnWoned;
         }
 
         private void Awake()
